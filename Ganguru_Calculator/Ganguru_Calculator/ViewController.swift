@@ -105,16 +105,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonChangeSign(_ sender: UIButton) {
-        let count = displayLabel.text!.count
-        if(count <= 1){
-            displayLabel.text = "-"+displayLabel.text!
+        let display = displayLabel.text!
+        let op = display[display.startIndex]
+        if(op == "-"){
+            displayLabel.text = displayLabel.text!.replacingOccurrences(of: "-", with: "")
         }
         else{
-            let op = displayLabel.text!.removeFirst();
-            print("OP is \(op)")
-            if(op == "-"){
-                displayLabel.text = displayLabel.text!.replacingOccurrences(of: "-", with: "")
-            }
+            displayLabel.text = "-"+displayLabel.text!
         }
     }
     
