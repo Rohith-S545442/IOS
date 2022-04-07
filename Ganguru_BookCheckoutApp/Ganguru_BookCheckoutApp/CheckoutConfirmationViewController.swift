@@ -22,7 +22,8 @@ class CheckoutConfirmationViewController: UIViewController {
         super.viewDidLoad()
         
         nameStatusLabel.text = "\(name1), your checkout is successful!!!"
-        bookImage
+        bookTitle.text! = bookObj.bookName
+        bookImage.image = UIImage(named: bookObj.bookImage)
 
         // Do any additional setup after loading the view.
     }
