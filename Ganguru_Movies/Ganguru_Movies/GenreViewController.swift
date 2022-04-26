@@ -9,7 +9,6 @@ import UIKit
 
 class GenreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("\(movies_array.count)")
         return movies_array.count
         
     }
@@ -17,7 +16,6 @@ class GenreViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = genreTableView.dequeueReusableCell(withIdentifier: "sectionCell", for: indexPath)
         cell.textLabel?.text = movies_array[indexPath.row].category
-        print("\(cell)")
         return cell
     }
     
